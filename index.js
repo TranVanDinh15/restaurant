@@ -29,4 +29,6 @@ app.get('/', function (req, res) {
 // route
 router(app)
 connectDB()
-app.listen(9999)
+app.listen(process.env.PORT || 3001, '0.0.0.0', () => {
+    console.log("Server is running.");
+});
